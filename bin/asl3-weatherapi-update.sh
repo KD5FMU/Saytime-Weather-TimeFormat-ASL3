@@ -41,16 +41,19 @@ jq -e '.current.condition.text and .current.temp_f and .location.name' "$TMP_JSO
 mv "$TMP_JSON" "$OUT_JSON"
 
 jq -r '
-  "LOCATION_NAME=\(.location.name)",
+  def safe_round:
+    if . == null then "" else (round | tostring) end;
+
+  "LOCATION_NAME=\(.location.name // "")",
   "REGION=\(.location.region // "")",
   "COUNTRY=\(.location.country // "")",
-  "TEMP_F=\(.current.temp_f | round)",
-  "TEMP_C=\(.current.temp_c | round)",
-  "FEELSLIKE_F=\(.current.feelslike_f | round)",
-  "FEELSLIKE_C=\(.current.feelslike_c | round)",
-  "HUMIDITY=\(.current.humidity // "")",
-  "CONDITION=\(.current.condition.text)",
-  "UPDATED_EPOCH=\(.current.last_updated_epoch // now | floor)"
+  "TEMP_F=\(.current.temp_f | safe_round)",
+  "TEMP_C=\(.current.temp_c | safe_round)",
+  "FEELSLIKE_F=\(.current.feelslike_f | safe_round)",
+  "FEELSLIKE_C=\(.current.feelslike_c | safe_round)",
+  "HUMIDITY=\((.current.humidity // "") | tostring)",
+  "CONDITION=\(.current.condition.text // "")",
+  "UPDATED_EPOCH=\((.current.last_updated_epoch // .location.localtime_epoch // now) | floor | tostring)"
 ' "$OUT_JSON" > "$OUT_ENV"
 
 chmod 0644 "$OUT_JSON" "$OUT_ENV"
