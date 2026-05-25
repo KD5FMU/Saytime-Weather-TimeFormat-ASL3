@@ -1,0 +1,8 @@
+[Unit]
+Description=ASL3 Saytime WeatherAPI cache update
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/asl3-weatherapi-update.sh

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run ASL3 Saytime WeatherAPI cache update every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+RandomizedDelaySec=60
+Persistent=true
+
+[Install]
+WantedBy=timers.target
