@@ -154,3 +154,5 @@ main(){
   show_done
 }
 main "$@"
+
+# Formatting refresh

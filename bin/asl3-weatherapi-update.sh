@@ -47,3 +47,5 @@ jq -r '
 
 chmod 0644 "$OUT_JSON" "$OUT_ENV"
 echo "Weather cache updated for $LOCATION"
+
+# Formatting refresh

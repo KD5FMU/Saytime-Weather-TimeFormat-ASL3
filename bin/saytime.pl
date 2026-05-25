@@ -268,3 +268,5 @@ sub condition_sounds {
     }
     return @f;
 }
+
+# Formatting refresh
