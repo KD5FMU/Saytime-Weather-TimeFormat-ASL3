@@ -19,12 +19,11 @@ TIME_FORMAT_ARG="${3:-}"
 log(){ echo "$(date '+%Y-%m-%d %H:%M:%S') installer: $*"; }
 die(){ echo "$(date '+%Y-%m-%d %H:%M:%S') installer ERROR: $*" >&2; exit 1; }
 need_root(){ [ "$(id -u)" -eq 0 ] || die "Please run with sudo or as root."; }
-backup_file(){ [ -f "$1" ] && cp -a "$1" "$1.bak.$(date +%Y%m%d-%H%M%S)"; }
-
-install_packages(){
-  log "Installing required packages: curl jq cron ca-certificates perl unzip sox"
-  apt-get update
-  DEBIAN_FRONTEND=noninteractive apt-get install -y curl jq cron ca-certificates perl unzip sox
+backup_file(){
+  if [ -f "$1" ]; then
+    cp -a "$1" "$1.bak.$(date +%Y%m%d-%H%M%S)"
+  fi
+  return 0
 }
 
 download_repo_files(){
