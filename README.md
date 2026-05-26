@@ -7,7 +7,7 @@ This version keeps the nostalgic recorded `.gsm` voice-file behavior from the ea
 ## What it does
 
 - Announces current time and WeatherAPI.com current conditions.
-- Supports 12-hour or 24-hour time.
+- ## Supports 12-hour or 24-hour time.
 - Uses the recorded voice files downloaded from the original sound file package.
 - Stores sound files in the same custom sound location used by the previous repos:
 
