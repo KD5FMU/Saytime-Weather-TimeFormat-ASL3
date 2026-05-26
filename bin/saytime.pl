@@ -171,21 +171,17 @@ sub build_time_sounds {
     push @f, add_sound('the-time-is');
 
     if ($timefmt eq '24') {
-        # 24-hour radio-style time: 0000 through 2359.
-        my $hh = sprintf('%02d', $hour);
-        my $mm = sprintf('%02d', $min);
+  # Spoken 24-hour time.
+  # Example: 19:19 becomes "nineteen hours and nineteen minutes".
+  push @f, add_number($hour);
+  push @f, add_sound($hour == 1 ? 'hour' : 'hours');
 
-        if ($hour == 0 && $min == 0) {
-            push @f, add_sound('0'), add_sound('0'), add_sound('hundred');
-        } elsif ($min == 0) {
-            if ($hour < 10) { push @f, add_sound('0'), add_number($hour); }
-            else { push @f, add_number($hour); }
-            push @f, add_sound('hundred');
-        } else {
-            push @f, add_sound(substr($hh,0,1)), add_sound(substr($hh,1,1));
-            push @f, add_sound(substr($mm,0,1)), add_sound(substr($mm,1,1));
-        }
-        push @f, add_sound('hours');
+  if ($min > 0) {
+    push @f, add_sound('and');
+    push @f, add_number($min);
+    push @f, add_sound($min == 1 ? 'minute' : 'minutes');
+  }
+}
     } else {
         my $ampm = $hour >= 12 ? 'p-m' : 'a-m';
         my $h12 = $hour % 12; $h12 = 12 if $h12 == 0;
@@ -214,7 +210,6 @@ sub build_weather_sounds {
 
     return @f unless $condition || defined $temp;
 
-    push @f, add_sound('1'); # short silence, if present under silence/1.gsm
     push @f, add_sound('weather');
     push @f, add_sound('conditions');
 
