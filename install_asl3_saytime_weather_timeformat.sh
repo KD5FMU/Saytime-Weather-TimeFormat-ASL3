@@ -113,6 +113,10 @@ install_recorded_sound_files(){
 
   chown -R asterisk:asterisk "$SOUNDS_DIR" 2>/dev/null || true
   chmod -R a+rX "$SOUNDS_DIR"
+
+  sox -n -r 8000 -c 1 "$SOUNDS_DIR/pause-350ms.gsm" trim 0.0 1.0
+  chmod 644 "$SOUNDS_DIR/pause-350ms.gsm"
+  chown asterisk:asterisk "$SOUNDS_DIR/pause-350ms.gsm" 2>/dev/null || true
 }
 
 install_systemd(){
