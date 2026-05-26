@@ -176,17 +176,20 @@ sub build_time_sounds {
     push @f, add_sound('the-time-is');
 
     if ($timefmt eq '24') {
-    # Spoken 24-hour time.
+    # Spoken 24-hour time with leading zero for 01 through 09.
     # Examples:
+    #   01:00 = "zero one hundred hours"
+    #   09:00 = "zero nine hundred hours"
     #   21:00 = "twenty-one hundred hours"
-    #   21:19 = "twenty-one hours and nineteen minutes"
-    #   00:00 = "zero hundred hours"
+    #   01:15 = "zero one hours and fifteen minutes"
 
     if ($min == 0) {
+        push @f, add_sound('0') if $hour < 10;
         push @f, add_number($hour);
         push @f, add_sound('hundred');
         push @f, add_sound('hours');
     } else {
+        push @f, add_sound('0') if $hour < 10;
         push @f, add_number($hour);
         push @f, add_sound($hour == 1 ? 'hour' : 'hours');
         push @f, add_sound('and');
