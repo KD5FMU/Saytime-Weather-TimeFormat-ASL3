@@ -58,6 +58,11 @@ my %wx = (-f $env_file) ? read_ini($env_file) : ();
 my @sounds;
 
 push @sounds, build_time_sounds() unless $silent == 2;
+
+# Add a short real silence between the time and weather so it does not sound like a run-on sentence.
+my $pause_file = "$base/pause-350ms.gsm";
+push @sounds, $pause_file if %wx && $silent != 2 && -f $pause_file;
+
 push @sounds, build_weather_sounds(\%wx) if %wx;
 
 @sounds = grep { defined $_ && -f $_ } @sounds;
@@ -171,17 +176,24 @@ sub build_time_sounds {
     push @f, add_sound('the-time-is');
 
     if ($timefmt eq '24') {
-  # Spoken 24-hour time.
-  # Example: 19:19 becomes "nineteen hours and nineteen minutes".
-  push @f, add_number($hour);
-  push @f, add_sound($hour == 1 ? 'hour' : 'hours');
+    # Spoken 24-hour time.
+    # Examples:
+    #   21:00 = "twenty-one hundred hours"
+    #   21:19 = "twenty-one hours and nineteen minutes"
+    #   00:00 = "zero hundred hours"
 
-  if ($min > 0) {
-    push @f, add_sound('and');
-    push @f, add_number($min);
-    push @f, add_sound($min == 1 ? 'minute' : 'minutes');
-  }
+    if ($min == 0) {
+        push @f, add_number($hour);
+        push @f, add_sound('hundred');
+        push @f, add_sound('hours');
     } else {
+        push @f, add_number($hour);
+        push @f, add_sound($hour == 1 ? 'hour' : 'hours');
+        push @f, add_sound('and');
+        push @f, add_number($min);
+        push @f, add_sound($min == 1 ? 'minute' : 'minutes');
+    }
+} else {
         my $ampm = $hour >= 12 ? 'p-m' : 'a-m';
         my $h12 = $hour % 12; $h12 = 12 if $h12 == 0;
         push @f, add_number($h12);
