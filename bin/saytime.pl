@@ -181,7 +181,6 @@ sub build_time_sounds {
     push @f, add_number($min);
     push @f, add_sound($min == 1 ? 'minute' : 'minutes');
   }
-}
     } else {
         my $ampm = $hour >= 12 ? 'p-m' : 'a-m';
         my $h12 = $hour % 12; $h12 = 12 if $h12 == 0;
