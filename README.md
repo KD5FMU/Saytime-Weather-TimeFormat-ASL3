@@ -25,7 +25,7 @@ This version keeps the nostalgic recorded `.gsm` voice-file behavior from the ea
 Download the installer from your new GitHub repo after publishing it:
 
 ```bash
-wget https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/install_asl3_saytime_weather_timeformat.sh
+sudo wget https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/install_asl3_saytime_weather_timeformat.sh
 chmod +x install_asl3_saytime_weather_timeformat.sh
 sudo ./install_asl3_saytime_weather_timeformat.sh
 ```
