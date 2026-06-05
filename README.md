@@ -26,7 +26,13 @@ Download the installer from your new GitHub repo after publishing it:
 
 ```bash
 sudo wget https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/install_asl3_saytime_weather_timeformat.sh
+```
+then we need to make it executable
+```
 chmod +x install_asl3_saytime_weather_timeformat.sh
+```
+And then we can run the installer
+```
 sudo ./install_asl3_saytime_weather_timeformat.sh
 ```
 
