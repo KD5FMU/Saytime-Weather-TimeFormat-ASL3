@@ -29,7 +29,7 @@ sudo wget https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-AS
 ```
 then we need to make it executable
 ```
-chmod +x install_asl3_saytime_weather_timeformat.sh
+sudo chmod +x install_asl3_saytime_weather_timeformat.sh
 ```
 And then we can run the installer
 ```
