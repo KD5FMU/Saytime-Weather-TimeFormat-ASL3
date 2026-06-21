@@ -21,9 +21,7 @@ This version keeps the nostalgic recorded `.gsm` voice-file behavior from the ea
 - Handles multi-word WeatherAPI.com conditions such as `Partly Cloudy`, `Light Rain`, and `Patchy Rain Nearby` by trying to speak each available word in order.
 
 ## Watch this video to get your weatherapi.com API Key
-```
-https://youtu.be/B-R4uuhnt8Q?si=udy-A6yhVQdSpHDn
-```
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://youtu.be/B-R4uuhnt8Q?si=VhNb4TtPifF101b0)
 
 
 ## Install
