@@ -20,8 +20,9 @@ This version keeps the nostalgic recorded `.gsm` voice-file behavior from the ea
 - Adds an editable root crontab block for hourly announcements.
 - Handles multi-word WeatherAPI.com conditions such as `Partly Cloudy`, `Light Rain`, and `Patchy Rain Nearby` by trying to speak each available word in order.
 
-## Watch this video to get your weatherapi.com API Key
-[![Watch the video](https://img.youtube.com/vi/B-R4uuhnt8Q&t/hqdefault.jpg)](https://www.youtube.com/watch?v=B-R4uuhnt8Q&t)
+## Watch this video to get your WeatherAPI.com API Key
+
+[![Watch the video](https://img.youtube.com/vi/B-R4uuhnt8Q/hqdefault.jpg)](https://www.youtube.com/watch?v=B-R4uuhnt8Q)
 
 
 ## Install
