@@ -19,7 +19,8 @@ This version keeps the nostalgic recorded `.gsm` voice-file behavior from the ea
 - Installs a systemd service and timer to keep weather data cached.
 - Adds an editable root crontab block for hourly announcements.
 - Handles multi-word WeatherAPI.com conditions such as `Partly Cloudy`, `Light Rain`, and `Patchy Rain Nearby` by trying to speak each available word in order.
-- Watch this video to get your weatherapi.com API Key
+
+## Watch this video to get your weatherapi.com API Key
 ```
 https://youtu.be/B-R4uuhnt8Q?si=udy-A6yhVQdSpHDn
 ```
