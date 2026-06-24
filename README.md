@@ -151,6 +151,20 @@ systemctl status asl3-weatherapi-update.timer
 systemctl status asl3-weatherapi-update.service
 ```
 
+## Unistall
+- if you feel you want to uninstall this setup then download this script
+```
+https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/uninstaller_remove_audio_files.sh
+```
+And then make it executable
+```
+sudo chmod +x uninstaller_remove_audio_files.sh
+```
+And then run the file
+```
+sudo ./uninstaller_remove_audio_files.sh
+```
+
 ## Notes
 
 - If Supermon changes or overwrites sound/script locations later, rerun the installer.
@@ -164,6 +178,6 @@ systemctl status asl3-weatherapi-update.service
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the GNU 3.0 General Public License.
 
 By submitting a contribution to this repository, you agree that your contribution is licensed under the same MIT License.
