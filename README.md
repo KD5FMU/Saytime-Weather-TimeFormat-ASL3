@@ -80,6 +80,15 @@ LOCATION="Henryetta OK"
 LOCATION="KTUL"
 LOCATION="Tulsa International Airport"
 ```
+`You may also use Airport Codes if you wish in this format
+
+Example:
+
+```bash
+LOCATION="metar:UUVE"
+
+the UUVE example would be your ACIO Airport Code
+```
 
 ## Test WeatherAPI.com cache
 
