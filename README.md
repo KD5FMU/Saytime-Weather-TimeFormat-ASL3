@@ -90,6 +90,16 @@ LOCATION="metar:UUVE"
 the UUVE example would be your ACIO Airport Code
 ```
 
+`You may also use Latitude and Longitude in this format
+
+Example:
+
+```bash
+LOCATION="66.3229, -38.8141"
+
+but you would use your coordinattes for your location. Only use four digits past the decimal
+```
+
 ## Test WeatherAPI.com cache
 
 ```bash
