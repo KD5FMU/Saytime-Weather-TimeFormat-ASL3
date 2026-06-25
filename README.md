@@ -80,16 +80,17 @@ LOCATION="Henryetta OK"
 LOCATION="KTUL"
 LOCATION="Tulsa International Airport"
 ```
-`You may also use Airport Codes if you wish in this format
+`You may also use ICAO Airport Codes if you wish in this format
 
 Example:
 
 ```bash
 LOCATION="metar:UUVE"
 
-the UUVE example would be your ACIO Airport Code
+the UUVE example would be your ICAO Airport Code
+Reference https://www.avcodes.co.uk/aptcodesearch.asp
 ```
-
+ 
 `You may also use Latitude and Longitude in this format
 
 Example:
