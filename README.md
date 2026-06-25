@@ -118,13 +118,13 @@ sudo /usr/bin/perl /usr/local/sbin/saytime.pl
 Using command-line values:
 
 ```bash
-sudo /usr/bin/perl /usr/local/sbin/saytime.pl 74437 58176 12
+sudo /usr/bin/perl /usr/local/sbin/saytime.pl YOUR_ZIP YOUR_NODE_NUMBER 12
 ```
 
 or:
 
 ```bash
-sudo /usr/bin/perl /usr/local/sbin/saytime.pl 74437 58176 24
+sudo /usr/bin/perl /usr/local/sbin/saytime.pl YOUR_ZIP YOUR_NODE_NUMBER 24
 ```
 
 ## Crontab
