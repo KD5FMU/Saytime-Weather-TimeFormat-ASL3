@@ -77,7 +77,7 @@ Examples:
 ```bash
 LOCATION="74437"
 LOCATION="Henryetta OK"
-LOCATION="KTUL"
+LOCATION="metar:AIRPORT_CODE"
 LOCATION="Tulsa International Airport"
 ```
 `You may also use ICAO Airport Codes if you wish in this format
