@@ -174,15 +174,15 @@ systemctl status asl3-weatherapi-update.service
 ## Uninstall
 - if you feel you want to uninstall this setup then download this script
 ```
-sudo wget https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/uninstaller_remove_audio_files.sh](https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/uninstall_asl3_saytime_weather_timeformat.sh
+sudo wget https://raw.githubusercontent.com/KD5FMU/Saytime-Weather-TimeFormat-ASL3/refs/heads/main/uninstall_asl3_saytime_weather_timeformat.sh
 ```
 And then make it executable
 ```
-sudo chmod +x uninstaller_remove_audio_files.sh
+sudo chmod +x uninstall_asl3_saytime_weather_timeformat.sh
 ```
 And then run the file
 ```
-sudo ./uninstaller_remove_audio_files.sh
+sudo ./uninstall_asl3_saytime_weather_timeformat.sh
 ```
 
 ## Notes
