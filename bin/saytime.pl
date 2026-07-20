@@ -234,13 +234,13 @@ sub build_weather_sounds {
     if (defined $temp && $temp ne '') {
         push @f, add_sound('temperature');
         push @f, add_number(int($temp));
-        push @f, add_sound($unit eq 'C' ? 'degrees-celsius' : 'degrees');
+        push @f, add_sound('degrees');
     }
 
     if (($cfg{ANNOUNCE_FEELS_LIKE} || 'no') =~ /^y/i && defined $feels && $feels ne '') {
         push @f, add_sound('feels'), add_sound('like');
         push @f, add_number(int($feels));
-        push @f, add_sound($unit eq 'C' ? 'degrees-celsius' : 'degrees');
+        push @f, add_sound('degrees');
     }
 
     if (($cfg{ANNOUNCE_HUMIDITY} || 'no') =~ /^y/i && defined $wx->{HUMIDITY} && $wx->{HUMIDITY} ne '') {
