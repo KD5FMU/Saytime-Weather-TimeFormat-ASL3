@@ -12,6 +12,8 @@ Top-of-the-hour spoken time and current weather conditions for AllStarLink 3 on 
 
 This version keeps the nostalgic recorded `.gsm` voice-file behavior from the earlier KD5FMU Saytime/Weather projects, while adding selectable 12-hour or 24-hour time.
 
+- [Installation](#install)
+
 ## What it does
 
 - Announces current time and WeatherAPI.com current conditions.
