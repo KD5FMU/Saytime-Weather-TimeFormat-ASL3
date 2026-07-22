@@ -1,3 +1,11 @@
+<p align="center">
+  <img
+    src="images/saytime.png"
+    alt="ASL3 Saytime Weather TimeFormat"
+    width="100%"
+  />
+</p>
+
 # ASL3 Saytime Weather TimeFormat
 
 Top-of-the-hour spoken time and current weather conditions for AllStarLink 3 on Debian 12 Bookworm and Debian 13 Trixie.
