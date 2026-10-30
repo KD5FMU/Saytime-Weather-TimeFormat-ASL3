@@ -201,7 +201,7 @@ sub build_time_sounds {
         my $h12 = $hour % 12; $h12 = 12 if $h12 == 0;
         push @f, add_number($h12);
         if ($min == 0) {
-            push @f, add_sound('oclock');
+         #   push @f, add_sound('oclock');
         } elsif ($min < 10) {
             push @f, add_sound('oh');
             push @f, add_number($min);
